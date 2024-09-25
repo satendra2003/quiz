@@ -1,0 +1,1257 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* amit */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+#login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fef8f8;
+  border: 1px solid #fef8f8;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+.header .title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.candidate-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px 0;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.system, .candidate {
+  flex: 1;
+  min-width: 200px;
+  background-color: #ff6d34;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tree {
+  text-align: center;
+}
+
+.tree button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tree button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header, .candidate-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .candidate-info .system, .candidate-info .candidate {
+    width: 100%;
+  }
+}
+
+/* Guidelines Additional Styles for Center Alignment */
+.guidelines-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.guidelines {
+  max-width: 600px;
+  text-align: left;
+}
+
+.guidelines ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.guidelines li {
+  margin-bottom: 10px;
+  padding: 6px 0;
+}
+
+.guidelines h3 {
+  text-align: center;
+  padding: 10px 0;
+}
+    
+/*------ webcam ------*/
+/* Basic styles for the video element */
+video {
+    width: 200px; /* Adjust to the page's width */
+    height: 150px; /* Maintain aspect ratio */
+    background: url('https://via.placeholder.com/640x480?text=Camera+is+Off') no-repeat center center; /* Background image when the camera is off */
+    background-size: cover; /* Ensure the image covers the entire area */
+    border-radius: 10px;
+}
+
+.video-wrapper {
+    position: relative; /* For centering content inside the video frame */
+    text-align: center;padding: 6px 0 6px 0;}
+
+.camera-off-message {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%); /* Center the message */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;padding: 10px;border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+
+/* Base styles */
+.note {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 1.5625rem; /* 25px / 16px */
+}
+
+.photo {
+  width: 6.25rem; /* 100px / 16px */
+  height: 6.25rem; /* 100px / 16px */
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 1.25rem; /* 20px / 16px */
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .note {
+    font-size: 0.60rem; /* 12px / 16px */
+    margin-top: 1rem; /* 16px / 16px */
+  }
+
+  .photo {
+    width: 4.375rem; /* 70px / 16px */
+    height: 4.375rem; /* 70px / 16px */
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .photo {
+    width: 5rem; /* 80px / 16px */
+    height: 5rem; /* 80px / 16px */
+  }
+}
+
+@media (min-width: 769px) {
+  .photo {
+    width: 6.25rem; /* 100px / 16px */
+    height: 6.25rem; /* 100px / 16px */
+  }
+}
+
+
+/* Base styles */
+.icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; /* 16px / 16px */
+}
+
+.icons i {
+  margin-right: 1rem; /* 16px / 16px */
+  font-size: 1.125rem; /* 18px / 16px */
+  color: #777;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.75rem 1.25rem; /* 12px 20px / 16px */
+  margin: 0.625rem 0; /* 10px / 16px */
+  border: none;
+  border-radius: 0.25rem; /* 4px / 16px */
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.quiz-container {
+  background-color: #f9f9f9;
+  padding: 0;
+  border-radius: 0.3125rem; /* 5px / 16px */
+  border: 1px solid #ccc;
+  display: flex;
+}
+
+.quiz-container > div:first-child {
+  flex-grow: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .icons {
+    margin-bottom: 0.75rem; /* Reduced margin for smaller screens */
+  }
+
+  .icons i {
+    margin-right: 0.75rem; /* Reduced margin for smaller screens */
+    font-size: 0.5rem; /* Reduced font size for smaller screens */
+  }
+
+  .btn {
+    padding: 0.4rem 1rem; /* Reduced padding for smaller screens */
+    margin: 0.5rem 0; /* Reduced margin for smaller screens */
+  }
+
+  .quiz-container {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    margin: 1rem; /* Add some margin for better spacing */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .icons {
+    margin-bottom: 0.875rem; /* Adjusted margin for tablets */
+  }
+
+  .icons i {
+    margin-right: 0.875rem; /* Adjusted margin for tablets */
+    font-size: 1.125rem; /* Slightly smaller font size for tablets */
+  }
+
+  .btn {
+    padding: 0.75rem 1.125rem; /* Slightly adjusted padding for tablets */
+    margin: 0.625rem 0; /* Adjusted margin for tablets */
+  }
+
+}
+
+@media (min-width: 769px) {
+  .icons {
+    margin-bottom: 1rem; /* Default margin for larger screens */
+  }
+
+  .icons i {
+    margin-right: 1rem; /* Default margin for larger screens */
+    font-size: 1.125rem; /* Default font size for larger screens */
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem; /* Default padding for larger screens */
+    margin: 0.625rem 0; /* Default margin for larger screens */
+  }
+
+  
+}
+
+/* Base styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  border-radius: 0.3125rem; /* 5px / 16px */
+  height: 9.375rem; /* 150px / 16px */
+}
+
+.timer {
+  font-size: 1.125rem; /* 18px / 16px */
+}
+
+.quiz-content {
+  margin-top: 1.25rem; /* 20px / 16px */
+}
+
+.question-container {
+  margin-top: 4.375rem; /* 70px / 16px */
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0.625rem 1.25rem; /* 10px 20px / 16px */
+  border: none;
+  border-radius: 0.3125rem; /* 5px / 16px */
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  background-color: #45a049;
+}
+
+.candidateContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  border-bottom: 0.125rem solid black; /* 2px / 16px */
+}
+
+.candidateContainer > div {
+  border: 0.125rem solid white; /* 2px / 16px */
+}
+
+.candidate-left {
+  flex-grow: 2;
+}
+
+.candidate-right {
+  display: flex;
+  gap: 1.25rem; /* 20px / 16px */
+  position: relative; /* Changed from absolute for better responsiveness */
+  padding-right: 1.875rem; /* 30px / 16px */
+}
+
+.candidate-right > .image > img {
+  height: 8.4375rem; /* 135px / 16px */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem; /* Added padding for small screens */
+  }
+
+  .timer {
+    font-size: 1rem; /* Reduced font size for smaller screens */
+  }
+
+  .quiz-content {
+    margin-top: 1rem; /* Reduced margin for smaller screens */
+  }
+
+  .question-container {
+    margin-top: 2.5rem; /* Reduced margin for smaller screens */
+  }
+
+  .navigation {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .navigation button {
+    padding: 0.5rem 1rem; /* Reduced padding for smaller screens */
+    margin-bottom: 0.5rem; /* Added margin between buttons */
+    width: 100%; /* Full width on small screens */
+  }
+
+  .candidateContainer {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center;
+  }
+
+  .candidate-right {
+    padding-right: 0; /* Removed right padding for small screens */
+    position: relative; /* Ensure relative positioning on small screens */
+  }
+
+  .candidate-right > .image > img {
+    height: 6rem; /* Reduced image height for smaller screens */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .timer {
+    font-size: 1.125rem; /* Adjusted font size for tablets */
+  }
+
+  .quiz-content {
+    margin-top: 1.25rem; /* Adjusted margin for tablets */
+  }
+
+  .question-container {
+    margin-top: 3.125rem; /* Adjusted margin for tablets */
+  }
+
+  .navigation button {
+    padding: 0.625rem 1.125rem; /* Slightly reduced padding for tablets */
+  }
+
+  .candidate-right {
+    padding-right: 1.5rem; /* Adjusted padding for tablets */
+  }
+
+  .candidate-right > .image > img {
+    height: 8rem; /* Adjusted image height for tablets */
+  }
+}
+
+@media (min-width: 769px) {
+
+  .candidate-right > .image > img {
+    height: 8.4375rem; /* Default image height for larger screens */
+  }
+}
+/* Base styles */
+.candidate-left > .row {
+  padding: 0.75rem 0.625rem; /* 12px 10px / 16px */
+  border-bottom: 0.125rem solid black; /* 2px / 16px */
+}
+
+.row:last-child {
+  border: none;
+}
+
+.row > span {
+  padding: 0.625rem 1.875rem; /* 10px 30px / 16px */
+  background-color: greenyellow;
+  border-radius: 0.3125rem; /* 5px / 16px */
+}
+
+.container {
+  background: white;
+  box-shadow: 0 0 0.625rem rgb(255, 170, 0); /* 10px / 16px */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+#quiz-section {
+  flex: 2;
+  border-right: 0.0625rem solid #ddd; /* 1px / 16px */
+}
+
+#question-container {
+  padding: 0.625rem; /* 10px / 16px */
+  margin-bottom: 1.25rem; /* 20px / 16px */
+}
+
+#options div {
+  margin: 0.625rem 0; /* 10px / 16px */
+}
+
+#navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+aside {
+  flex: 1;
+  padding: 1.25rem; /* 20px / 16px */
+  max-width: 15.625rem; /* 250px / 16px */
+}
+
+#status-panel {
+  margin-bottom: 1.25rem; /* 20px / 16px */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem; /* 20px / 16px */
+}
+
+#status-panel > div {
+  max-width: 7.5rem; /* 120px / 16px */
+  flex-grow: 1;
+  font-size: 0.75rem; /* 12px / 16px */
+}
+
+#question-nav {
+  margin-left: -1.9375rem; /* -31px / 16px */
+  text-align: center;
+}
+
+#question-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.625rem; /* 10px / 16px */
+  padding: 0 1.25rem; /* 20px / 16px */
+}
+
+#question-buttons > button {
+  background-color: rgb(143, 143, 143);
+  border-radius: 0.3125rem; /* 5px / 16px */
+}
+
+#question-buttons > button:hover {
+  background-color: rgb(255, 170, 0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .candidate-left > .row {
+    padding: 0.5rem 0.5rem; /* Reduced padding for smaller screens */
+  }
+
+  .row > span {
+    padding: 0.5rem 1rem; /* Reduced padding for smaller screens */
+  }
+
+  .container {
+    padding: 1rem; /* Added padding for small screens */
+  }
+
+  main {
+    flex-direction: column; /* Stack main sections vertically on small screens */
+  }
+
+  #quiz-section {
+    padding: 1rem;
+    align-items: center;
+    margin-right: 1rem;
+    border-right: none; /* Remove right border on small screens */
+    border-bottom: 0.0625rem solid #ddd; /* Add bottom border */
+  }
+
+  aside {
+    padding: 0.2rem; /* Adjust padding */
+    max-width: 100%; /* Ensure full width on small screens */
+    height: 20vh; /* Set height to 50% of the viewport height */
+    overflow-y: auto; /* Ensure content is scrollable if it exceeds the height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+
+  #status-panel {
+    gap: 0.5rem; /* Adjust gap for smaller screens */
+  }
+
+  #status-panel > div {
+    max-width: 100%; /* Ensure full width on small screens */
+    font-size: 0.75em; /* Adjust font size for better readability */
+  }
+
+  #question-nav {
+    margin-left: 0; /* Reset margin for small screens */
+  }
+
+  #question-buttons {
+    grid-template-columns: repeat(5, 1fr); /* Stack buttons in 2 columns for small screens */
+    gap: 0.5rem; /* Reduced gap for smaller screens */
+    padding: 0 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .candidate-left > .row {
+    padding: 0.75rem 0.75rem; /* Adjusted padding for tablets */
+  }
+
+  .row > span {
+    padding: 0.625rem 1.5rem; /* Adjusted padding for tablets */
+  }
+
+  .container {
+    padding: 1.5rem; /* Added padding for tablets */
+  }
+
+  main {
+    flex-direction: row; /* Default layout for tablets */
+  }
+
+  #quiz-section {
+    border-right: 0.0625rem solid #ddd; /* Ensure right border */
+  }
+
+  aside {
+    max-width: 20rem; /* Adjust max-width for tablets */
+  }
+
+  #status-panel {
+    gap: 1.25rem; /* Adjust gap for tablets */
+  }
+
+  #status-panel > div {
+    max-width: 8rem; /* Adjust max-width for tablets */
+  }
+
+  #question-buttons {
+    grid-template-columns: repeat(3, 1fr); /* Stack buttons in 3 columns for tablets */
+    gap: 0.75rem; /* Adjust gap for tablets */
+  }
+}
+
+@media (min-width: 769px) {
+
+  #quiz-section {
+    border-right: 0.0625rem solid #ddd; /* Default right border */
+  }
+
+  aside {
+    max-width: 25rem; /* Adjust max-width for larger screens */
+  }
+
+  #status-panel {
+    gap: 1.5rem; /* Adjust gap for larger screens */
+  }
+
+  #status-panel > div {
+    max-width: 9rem; /* Adjust max-width for larger screens */
+  }
+
+  #question-buttons {
+    grid-template-columns: repeat(4, 1fr); /* Default 4 columns layout */
+  }
+}
+
+/* #next-btn{
+  position: absolute;
+  top: -100px;
+  right: 0;
+} */
+/* Base styles */
+#question-buttons button {
+  padding: 0.625rem; /* 10px / 16px */
+  cursor: pointer;
+}
+
+#question-buttons button.active {
+  background-color: rgb(255, 170, 0);
+  color: black;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0.625rem 3.125rem; /* 10px 50px / 16px */
+  margin-top: 0.625rem; /* 10px / 16px */
+  border-top: 0.0625rem solid black; /* 1px / 16px */
+}
+
+footer > div:first-child > button {
+  background-color: rgb(255, 170, 0);
+  border-radius: 2px;
+  border: 0.0625rem solid black; /* 1px / 16px */
+  color: black;
+}
+
+button {
+  padding: 0.625rem 1.25rem; /* 10px 20px / 16px */
+  border: none;
+  background-color: rgb(255, 170, 0);
+  color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255, 170, 0);
+}
+
+button[disabled] {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.lang-row {
+  background-color: rgb(255, 170, 0);
+  color: black;
+}
+
+.lang-row > .lang {
+  transform: translateX(85%);
+}
+
+/* Responsive adjustments */
+  @media (max-width: 480px) {
+    #question-buttons button {
+      padding: 0.5rem; /* Increased padding to ensure better usability */
+      font-size: 1rem; /* Adjust font size for readability */
+    }
+  
+    footer {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: center; /* Center items horizontally */
+      padding: 1rem; /* Ensure there is enough padding */
+    }
+  
+    footer > div:first-child > button {
+      padding: 1rem 1rem; /* Padding for first button */
+      font-size: 1rem; /* Adjust font size for readability */
+      margin-bottom: 1rem; /* Margin to separate buttons */
+    }
+  
+    footer > div {
+      margin-bottom: 1rem; /* Margin to separate footer items */
+      text-align: center; /* Center text within the divs */
+    }
+  
+
+  .lang-row > .lang {
+    transform: translateX(0); /* Reset translation for smaller screens */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #question-buttons button {
+    padding: 0.625rem; /* Adjusted padding for tablets */
+  }
+
+  footer {
+    padding: 0.75rem 2rem; /* Adjusted padding for tablets */
+  }
+
+  footer > div:first-child > button {
+    padding: 0.75rem; /* Adjusted padding for tablets */
+  }
+
+  button {
+    padding: 0.625rem 1.125rem; /* Adjusted padding for tablets */
+  }
+}
+
+@media (min-width: 769px) {
+}
+
+/* .lang-row, */
+/* Base styles */
+.title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  font-weight: 700;
+}
+
+#submit {
+  margin-top: 2.5rem; /* 40px */
+  width: 9.375rem; /* 150px */
+}
+
+.tree {
+  margin-left: 10rem; /* 160px */
+  margin-top: 2.5rem; /* 40px */
+}
+
+.paper-row {
+  padding: 1rem 1.25rem; /* 5px 20px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+#question-buttons button {
+  width: 3.125rem; /* 50px */
+  height: 3.125rem; /* 50px */
+  margin: 0.3125rem; /* 5px */
+  color: white;
+  font-size: 1rem; /* 16px */
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+#question-buttons button.active,
+#question-buttons button.visited-not-answered,
+#question-buttons button.visited-answered {
+  clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+}
+
+#question-buttons button.active {
+  background: brown;
+}
+
+#question-buttons button.visited-not-answered {
+  background: brown;
+}
+
+#question-buttons button.visited-answered {
+  background: green;
+}
+
+#question-buttons button.not-visited {
+  background: gray;
+  clip-path: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .title-row {
+    padding: 0.5rem 1rem; /* Reduced padding for smaller screens */
+  }
+
+  #submit {
+    margin-top: 1.875rem; /* Reduced margin for smaller screens */
+    width: 8rem; /* Adjusted width for smaller screens */
+  }
+
+  .tree {
+    margin-left: 6rem; /* Adjusted margin for smaller screens */
+    margin-top: 1.875rem; /* Reduced margin for smaller screens */
+  }
+
+  #email {
+     display: grid;
+     place-items: center; 
+     width: 100%;
+     margin:10px 0;
+  }
+
+  .paper-row {
+    padding: 0.25rem 1rem; /* Reduced padding for smaller screens */
+  }
+
+  #question-buttons button {
+    width: 2rem; /* Reduced width for smaller screens */
+    height: 2rem; /* Reduced height for smaller screens */
+    font-size: 0.7rem; /* Smaller font size for smaller screens */
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .title-row {
+    padding: 0.625rem 1.125rem; /* Adjusted padding for tablets */
+    font-size: 0.2rem;
+  }
+  .title-row>.special-text {
+    color: red;
+    font-size: 0.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  #submit {
+    margin-top: 2rem; /* Adjusted margin for tablets */
+    width: 8.75rem; /* Adjusted width for tablets */
+  }
+
+  .tree {
+    margin-left: 8rem; /* Adjusted margin for tablets */
+    margin-top: 2rem; /* Adjusted margin for tablets */
+  }
+
+  #email {
+    margin-left: 1.5rem; /* Adjusted margin for tablets */
+    height: 2.125rem; /* Adjusted height for tablets */
+    width: 19rem; /* Adjusted width for tablets */
+  }
+
+  .paper-row {
+    padding: 0.3125rem 1.125rem; /* Adjusted padding for tablets */
+  }
+
+  #question-buttons button {
+    width: 2.875rem; /* Adjusted width for tablets */
+    height: 2.875rem; /* Adjusted height for tablets */
+    font-size: 0.9375rem; /* Adjusted font size for tablets */
+  }
+}
+
+@media (min-width: 769px) {
+  /* Use default or larger sizes suitable for larger screens */
+}
+
+/* Base styles */
+.button {
+  width: 3.125rem; /* 50px */
+  height: 3.125rem; /* 50px */
+  margin: 0.3125rem; /* 5px */
+  border: 1px solid #ccc;
+  display: inline-block;
+  text-align: center;
+  line-height: 3.125rem; /* 50px */
+}
+
+.pentagon {
+  position: relative;
+  width: 6.25rem; /* 100px */
+  height: 3.125rem; /* 50px */
+  margin: 0.3125rem; /* 5px */
+  transform: rotate(36deg);
+  background-color: brown;
+}
+
+.pentagon:after {
+  content: "";
+  position: absolute;
+  top: -2.5rem; /* -40px */
+  left: -1.25rem; /* -20px */
+  width: 6.25rem; /* 100px */
+  height: 3.125rem; /* 50px */
+  transform: rotate(72deg);
+  background-color: green;
+}
+
+.inverted {
+  transform: rotate(180deg);
+}
+
+.visited-not-answered {
+  background-color: brown;
+}
+
+.visited-answered {
+  background-color: green;
+}
+
+.visited-not-answered .pentagon {
+  background-color: brown;
+}
+
+.visited-answered .pentagon {
+  background-color: green;
+}
+
+.visited-not-answered .pentagon:after {
+  background-color: brown;
+}
+
+.visited-answered .pentagon:after {
+  background-color: green;
+}
+
+.marked-for-review {
+  background-color: yellow !important;
+}
+
+.candidate-right {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 3.125rem; /* 50px */
+  height: 3.125rem; /* 50px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.image i {
+  font-size: 1.5rem; /* 24px */
+  color: #333;
+}
+
+.name {
+  margin-left: 0.625rem; /* 10px */
+}
+
+.image {
+  width: 12.5rem; /* 200px */
+  height: 9.375rem; /* 150px */
+  overflow: hidden;
+  position: relative;
+}
+
+.image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+.btn-sprt {
+  margin-top: -2.5rem; /* -40px */
+  margin-right: -1.875rem; /* -30px */
+  justify-content: space-between;
+}
+
+.accept-guidelines {
+  margin-top: 2.125rem;
+  text-align: center;
+}
+
+.markreview {
+  margin-left: -2.1875rem; /* -35px */
+}
+
+#question-container {
+  display: flex;
+  justify-content: center;
+}
+
+#quiz {
+  text-align: left; 
+  max-width: 37.5rem; /* 600px */
+  width: 100%; 
+}
+
+#question-number {
+  margin-top: 1.25rem; /* 20px */
+  font-size: 1rem; 
+  margin-bottom: 2.5rem; /* 40px */
+}
+
+#question {
+  font-size: 1.9rem; 
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+#options {
+  font-size: 1.5rem;
+}
+
+#options label{padding-left: 10px;}
+
+#options button {
+  display: block;
+  text-align: left; 
+  margin-top: 0.625rem; /* 10px */
+}
+
+.popup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5rem;
+  left: 28.5rem;
+  width: 375px;
+  height: 100%;
+}
+
+.popup-content {
+  background-color: rgba(255, 255, 255, 0.845);
+  background-color: #ffffff;
+  padding: 1.25rem; /* 20px */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content img{width: 150px;}
+
+.popup-content h2 {
+  margin: 0.625rem 0; /* 10px */
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .button {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+    line-height: 2.5rem; /* 40px */
+  }
+
+  .pentagon {
+    width: 5rem; /* 80px */
+    height: 2.5rem; /* 40px */
+    top: -2rem; /* -32px */
+    left: -1rem; /* -16px */
+  }
+
+  .pentagon:after {
+    width: 5rem; /* 80px */
+    height: 2.5rem; /* 40px */
+    top: -1.75rem; /* -28px */
+    left: -0.75rem; /* -12px */
+  }
+
+  .image {
+    width: 7.5rem; /* 120px */
+    height: 5.625rem; /* 90px */
+  }
+
+  .image i {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .name {
+    margin-left: 0.5rem; /* 8px */
+    padding-right: 5%;
+    padding-top: 2.5%;
+  }
+
+  .btn-sprt {
+    margin-top: -1.875rem; /* -30px */
+    margin-right: -1.25rem; /* -20px */
+  }
+
+  #question-number {
+    font-size: 1.5rem; 
+    margin-left: 3.75rem; /* 60px */
+  }
+
+  #question {
+    font-size: 1.5rem; 
+    margin-left: 3.75rem; /* 60px */
+  }
+
+  #options {
+    font-size: 1.2rem;
+    margin-left: 3.75rem; /* 60px */
+  }
+
+  #options button {
+    margin-top: 0.5rem; /* 8px */
+  }
+
+  .popup {
+    top: 10rem; /* 160px */
+    left: 5rem; /* 80px */
+    right: 5rem; /* 80px */
+  }
+
+  .popup-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: 2rem; /* 32px */
+    height: 2rem; /* 32px */
+    line-height: 2rem; /* 32px */
+  }
+
+  .pentagon {
+    width: 4rem; /* 64px */
+    height: 2rem; /* 32px */
+    top: -1.5rem; /* -24px */
+    left: -0.75rem; /* -12px */
+  }
+
+  .pentagon:after {
+    width: 4rem; /* 64px */
+    height: 2rem; /* 32px */
+    top: -1.25rem; /* -20px */
+    left: -0.5rem; /* -8px */
+  }
+
+  .image {
+    width: 5rem; /* 80px */
+    height: 3.75rem; /* 60px */
+  }
+
+  .image i {
+    font-size: 1rem; /* 16px */
+  }
+
+  .name {
+    margin-left: 0.25rem; /* 4px */
+    padding-right: 2.5%;
+    padding-top: 1.25%;
+  }
+
+  .btn-sprt
+
+/* Popup Logo */
+.popup-logo {
+  width: 5rem; /* 80px */
+  height: 5rem; /* 80px */
+  margin-bottom: 0.625rem; /* 10px */
+}
+
+/* Popup Buttons Container */
+.popup-buttons {
+  margin-top: 1.25rem; /* 20px */
+}
+
+/* Popup Buttons */
+.popup-buttons button {
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  margin: 0.625rem; /* 10px */
+  border: none;
+  border-radius: 0.3125rem; /* 5px */
+  cursor: pointer;
+  font-size: 1rem; /* 16px */
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+}
+
+/* Button Hover State */
+.popup-buttons button:hover {
+  background-color: #ff9800;
+}
+
+/* Button Active State */
+.popup-buttons button:active {
+  background-color: #e67e22;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .popup-logo {
+    width: 4rem; /* 64px */
+    height: 4rem; /* 64px */
+  }
+
+  .popup-buttons button {
+    padding: 0.5rem 1rem; /* 8px 16px */
+    font-size: 0.875rem; /* 14px */
+  }
+}
+
+@media (max-width: 480px) {
+  .popup-logo {
+    width: 3rem; /* 48px */
+    height: 3rem; /* 48px */
+  }
+
+  .popup-buttons button {
+    padding: 0.375rem 0.75rem; /* 6px 12px */
+    font-size: 0.75rem; /* 12px */
+  }
+}
